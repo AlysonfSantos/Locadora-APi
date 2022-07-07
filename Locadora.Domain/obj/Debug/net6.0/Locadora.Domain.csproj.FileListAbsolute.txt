@@ -1,0 +1,12 @@
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\bin\Debug\net6.0\Locadora.Domain.deps.json
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\bin\Debug\net6.0\Locadora.Domain.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\bin\Debug\net6.0\Locadora.Domain.pdb
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.csproj.AssemblyReference.cache
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.AssemblyInfoInputs.cache
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.AssemblyInfo.cs
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.csproj.CoreCompileInputs.cache
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\refint\Locadora.Domain.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\Locadora.Domain.pdb
+C:\Users\digop\source\repos\Locadora\Locadora.Domain\obj\Debug\net6.0\ref\Locadora.Domain.dll

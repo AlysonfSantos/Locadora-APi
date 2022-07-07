@@ -1,0 +1,15 @@
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.csproj.AssemblyReference.cache
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.AssemblyInfoInputs.cache
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.AssemblyInfo.cs
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.csproj.CoreCompileInputs.cache
+C:\Users\digop\source\repos\Locadora\Locadora.Application\bin\Debug\net6.0\Locadora.Application.deps.json
+C:\Users\digop\source\repos\Locadora\Locadora.Application\bin\Debug\net6.0\Locadora.Application.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Application\bin\Debug\net6.0\Locadora.Application.pdb
+C:\Users\digop\source\repos\Locadora\Locadora.Application\bin\Debug\net6.0\Locadora.Domain.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Application\bin\Debug\net6.0\Locadora.Domain.pdb
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.csproj.CopyComplete
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\refint\Locadora.Application.dll
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\Locadora.Application.pdb
+C:\Users\digop\source\repos\Locadora\Locadora.Application\obj\Debug\net6.0\ref\Locadora.Application.dll
