@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Infra.Data", "Loca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Infra.IoC", "Locadora.Infra.IoC\Locadora.Infra.IoC.csproj", "{906E6756-D21C-4675-8F7B-06F79C816A77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locadora.Api", "Locadora.Api\Locadora.Api.csproj", "{25B342A3-E584-489B-BD50-46640D657CC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Locadora.Api", "Locadora.Api\Locadora.Api.csproj", "{25B342A3-E584-489B-BD50-46640D657CC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D4E8DB0-D570-4D5C-971F-70B0B6098543}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

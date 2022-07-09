@@ -24,7 +24,7 @@ namespace Locadora.Application.ViewModels.UploadArquivosViewModel
                     filme.Id = Convert.ToInt32(worksheet.Cells[row, Col: 1].Value);
                     filme.Titulo = worksheet.Cells[row, Col: 2].Value.ToString();
                     filme.ClassificacaoIndicativa = Convert.ToInt32(worksheet.Cells[row, Col: 3].Value);
-                    filme.Lancamento = Convert.ToInt32(worksheet.Cells[row, Col: 4].Value);
+                    filme.Lancamento = Convert.ToInt32(worksheet.Cells[row, Col: 4].Value) == 1 ? true : false;
                     ListarFilme.Add(filme);
 
                 }

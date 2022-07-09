@@ -17,7 +17,7 @@ namespace Locadora.Infra.Data.Repositoreis
 
         public async Task<IEnumerable<Locacao>> Listarlocacao() 
         {
-            return await _context.Locacao.ToListAsync();
+            return await _context.Locacao.Include(x => x.Filme).Include(x => x.Cliente).ToListAsync();
         }
         public async Task<IEnumerable<Locacao>> DataLocacao(DateTime data)
         {

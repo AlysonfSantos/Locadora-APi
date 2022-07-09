@@ -10,13 +10,17 @@ namespace Locadora.Application.Services
 {
     public class LocacaoAppService: ILocacaoAppService
     {
+        private readonly IClienteService _cadastroService;
+        private readonly IFilmeService _filmesService;
         private readonly ILocacaoService _locacaoService;
         private readonly IMapper _mapper;
 
-        public LocacaoAppService(ILocacaoService locacaoService, IMapper mapper)
+        public LocacaoAppService(ILocacaoService locacaoService, IMapper mapper, IFilmeService filmesService, IClienteService cadastroService)
         {
             _locacaoService = locacaoService;
             _mapper = mapper;
+            _filmesService = filmesService;
+            _cadastroService = cadastroService;
         }
 
         public async Task<IEnumerable<LocacaoViewModel>> Listarlocacao() 
@@ -31,9 +35,13 @@ namespace Locadora.Application.Services
         }
         public async Task<LocacaoViewModel> CadastrarLocacao(NovaLocacaoViewModel novaLocacaoViewModel)
         {
+            var filme = await _filmesService.FilmeId(novaLocacaoViewModel.IdFilmes);
+            var cliente = await _cadastroService.ClienteId(novaLocacaoViewModel.IdCliente);
+
             var novaLocacao = new Locacao(novaLocacaoViewModel.IdCliente, 
                 novaLocacaoViewModel.IdFilmes,
-                novaLocacaoViewModel.DataLocacao);
+                novaLocacaoViewModel.DataLocacao,
+                novaLocacaoViewModel.DataDevolucao = filme.Lancamento == true ? novaLocacaoViewModel.DataLocacao.AddDays(2) : novaLocacaoViewModel.DataLocacao.AddDays(3));
             var LocacaoCadastrada = await _locacaoService.CadastrarLocacao(novaLocacao);
             return _mapper.Map<LocacaoViewModel>(LocacaoCadastrada);
         }

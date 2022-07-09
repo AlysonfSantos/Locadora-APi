@@ -8,10 +8,11 @@ namespace Locadora.Domain.Services
     public class LocacaoService : ILocacaoService
     {
         private readonly ILocacaoRepository _locacaoRepository;
-
-        public LocacaoService(ILocacaoRepository locacaoRepository)
+        private readonly IFilmeRepository _filmerepository;
+        public LocacaoService(ILocacaoRepository locacaoRepository, IFilmeRepository filmerepository)
         {
             _locacaoRepository = locacaoRepository;
+            _filmerepository = filmerepository;
         }
 
         public async Task<IEnumerable<Locacao>> ListarLocacao() 
@@ -29,6 +30,8 @@ namespace Locadora.Domain.Services
 
         public async Task<Locacao> CadastrarLocacao(Locacao locacao) 
         {
+            var filmeID = await _filmerepository.Get(x => x.Id == locacao.IdFilmes);
+            if(filmeID == null) return null;
             await _locacaoRepository.CadastrarLocacao(locacao);
             await _locacaoRepository.UnitOfWork.SaveChangesAsync();
             return locacao;
@@ -41,7 +44,8 @@ namespace Locadora.Domain.Services
 
             locacao.Atualizar(command.IdCliente,
                 command.IdFilmes,
-                command.DataLocacao);
+                command.DataLocacao,
+                command.DataDevolucao);
 
             await _locacaoRepository.AtualizarLocacao(locacao);
             await _locacaoRepository.UnitOfWork.SaveChangesAsync();

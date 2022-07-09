@@ -14,7 +14,7 @@ namespace Locadora.Infra.Data.EF.Maps
 
         public void Configure(EntityTypeBuilder<Cliente> builder) 
         {
-            builder.ToTable("Cliente");
+       //     builder.ToTable("Cliente");
 
             builder.HasKey(x => x.Id);
           
@@ -28,6 +28,7 @@ namespace Locadora.Infra.Data.EF.Maps
 
             builder.Property(x => x.DataNascimento)
                 .IsRequired();
+            
         }
     }
 }

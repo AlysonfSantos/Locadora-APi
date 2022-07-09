@@ -13,7 +13,7 @@ namespace Locadora.Infra.Data.EF.Maps
     {
         public void Configure(EntityTypeBuilder<Filme> builder)
         {
-            builder.ToTable("Filmes");
+          //  builder.ToTable("Filmes");
 
             builder.HasKey(x => x.Id);
 

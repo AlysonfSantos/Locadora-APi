@@ -4,11 +4,6 @@ using Locadora.Infra.Data.EF.Maps;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Locadora.Infra.Data.EF
 {
@@ -25,6 +20,7 @@ namespace Locadora.Infra.Data.EF
             if (!(Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists())
                 Database.EnsureCreated();
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

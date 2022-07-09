@@ -11,17 +11,17 @@ namespace Locadora.Infra.Data.EF.Maps
 
         public void Configure(EntityTypeBuilder<Locacao> builder)
         {
-            builder.ToTable("Locacao");
+          //  builder.ToTable("Locacao");
 
             builder.HasKey(x => x.Id);
 
             builder.HasOne(x => x.Cliente)
-                .WithMany()
+                .WithMany(x=> x.Locacao)
                 .HasForeignKey(x => x.IdCliente)
                 .IsRequired();
 
             builder.HasOne(x => x.Filme)
-                .WithMany()
+                .WithMany(x => x.Locacao)
                 .HasForeignKey(x => x.IdFilmes)
                 .IsRequired();
 
@@ -29,8 +29,7 @@ namespace Locadora.Infra.Data.EF.Maps
             builder.Property(x => x.DataLocacao)
                 .IsRequired();
 
-            builder.Property(x => x.DataDevolucao)
-                .IsRequired();
+            builder.Property(x => x.DataDevolucao);
         }
     }
 }

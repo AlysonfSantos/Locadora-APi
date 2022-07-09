@@ -14,6 +14,7 @@ namespace Locadora.Domain.Models
         public string Nome { get; private set; }
         public string CPF { get; private set; }
         public DateTime DataNascimento { get; private set; }
+        public ICollection<Locacao> Locacao { get; private set; }
 
         public Cliente( string name, string cpf, DateTime dataNascimento)
         {

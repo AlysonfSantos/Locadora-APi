@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj": {}
+    "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Application\\Locadora.Application.csproj": {
+    "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Application\\Locadora.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Application\\Locadora.Application.csproj",
+        "projectUniqueName": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Application\\Locadora.Application.csproj",
         "projectName": "Locadora.Application",
-        "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Application\\Locadora.Application.csproj",
+        "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Application\\Locadora.Application.csproj",
         "packagesPath": "C:\\Users\\digop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Application\\obj\\",
+        "outputPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\digop\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj": {
-                "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj"
+              "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj": {
+                "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj": {
+    "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj",
         "projectName": "Locadora.Domain",
-        "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj",
+        "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj",
         "packagesPath": "C:\\Users\\digop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\obj\\",
+        "outputPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\digop\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -130,14 +130,14 @@
         }
       }
     },
-    "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj": {
+    "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj",
         "projectName": "Locadora.Infra.Data",
-        "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj",
+        "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj",
         "packagesPath": "C:\\Users\\digop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.Data\\obj\\",
+        "outputPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\digop\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -154,8 +154,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj": {
-                "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Domain\\Locadora.Domain.csproj"
+              "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj": {
+                "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Domain\\Locadora.Domain.csproj"
               }
             }
           }
@@ -174,6 +174,10 @@
               "target": "Package",
               "version": "[6.0.6, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -183,10 +187,6 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[6.0.1, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql.Design": {
-              "target": "Package",
-              "version": "[1.1.2, )"
             }
           },
           "imports": [
@@ -208,14 +208,14 @@
         }
       }
     },
-    "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj": {
+    "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj",
         "projectName": "Locadora.Infra.IoC",
-        "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj",
+        "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.IoC\\Locadora.Infra.IoC.csproj",
         "packagesPath": "C:\\Users\\digop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.IoC\\obj\\",
+        "outputPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\digop\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -232,11 +232,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Application\\Locadora.Application.csproj": {
-                "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Application\\Locadora.Application.csproj"
+              "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Application\\Locadora.Application.csproj": {
+                "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Application\\Locadora.Application.csproj"
               },
-              "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\digop\\source\\repos\\Locadora\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj"
+              "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\digop\\Documents\\GitHub\\Locadora-APi\\Locadora.Infra.Data\\Locadora.Infra.Data.csproj"
               }
             }
           }

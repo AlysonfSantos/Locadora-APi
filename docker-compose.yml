@@ -1,0 +1,56 @@
+version: '3.6'
+
+services: 
+    #db:
+    #    image: mysql
+    #    command: --default-authentication-plugin=mysql_native_password
+    #    restart: always
+    #    environment: 
+    #        MYSQL_ROOT_PASSWORD: root
+    #        MYSQL_DATABASE: mydb
+    #        MYSQL_USER: user
+    #        MYSQL_PASSWORD: user
+    
+    #    volumes: 
+    #        - ./init:/docker-entrypoint-initdb.d
+
+    #adminer:
+    #    image: adminer
+    #    restart: always
+    #    ports: 
+    #        - 8080:8080
+
+    #mariadb:
+    #  image: 'bitnami/mariadb:10.3'
+    #  ports:
+    #    - '3306:3306'
+    #  volumes:
+    #    - '/bitnami/mariadb/:/var/lib/mysql'
+    #  environment:
+    #    - ALLOW_EMPTY_PASSWORD=yes
+    #    - MARIADB_DATABASE=test
+    #    - MARIADB_PORT_NUMBER=3306
+    #    - MARIADB_ROOT_USER=root
+    #    - MARIADB_USER=monty
+    #    - MARIADB_PASSWORD=monty
+    #  container_name: mariadb
+    
+    sqldata:
+        image: mcr.microsoft.com/mssql/server:2017-latest 
+        container_name: sql-server-db
+        environment:
+          - SA_PASSWORD=Pass@word
+          - ACCEPT_EULA=Y
+        ports:
+          - "5433:1433"
+
+    Locadora-Api:
+        image: ${DOCKER_REGISTRY-}locadora.api
+        restart: on-failure
+        build:
+          context: .
+          dockerfile: Locadora.Api/Dockerfile
+        depends_on:
+          - sqldata
+
+

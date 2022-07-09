@@ -27,7 +27,7 @@ namespace Locadora.Infra.Data.Repositoreis
         }
         public async Task CadastrarCliente(Cliente cliente) 
         {
-            await _context.AddAsync(cliente);
+            await _context.Clientes.AddAsync(cliente);
         }
         public async Task AtualizarCliente(Cliente cliente) 
         {

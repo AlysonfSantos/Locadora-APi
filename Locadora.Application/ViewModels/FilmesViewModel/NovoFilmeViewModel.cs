@@ -8,10 +8,10 @@ namespace Locadora.Application.ViewModels.FilmesViewModel
 {
     public class NovoFilmeViewModel
     {
-        public int Id { get;  set; }
+      //  public int Id { get;  set; }
         public string Titulo { get;  set; }
         public int ClassificacaoIndicativa { get;  set; }
-        public int Lancamento { get;  set; }
+        public bool Lancamento { get;  set; }
 
     }
 }

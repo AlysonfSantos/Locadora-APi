@@ -35,8 +35,9 @@ namespace Locadora.Domain.Services
             if (filme == null) return null;
 
             filme.Atualizar(command.Titulo,
-                command.Lancamento,
-                command.ClassificacaoIndicativa);
+                 command.ClassificacaoIndicativa,
+                command.Lancamento
+               );
 
             await _filmerepository.AtualizarFilme(filme);
             await _filmerepository.UnitOfWork.SaveChangesAsync();

@@ -13,16 +13,16 @@ namespace Locadora.Domain.Models
         public int Id { get; private set; }
         public string Titulo { get; private set; }
         public int ClassificacaoIndicativa { get; private set; }
-        public int Lancamento { get; private set; }
-
-        public Filme(string titulo, int classificacaoIndicativa, int lancamento)
+        public bool Lancamento { get; private set; }
+        public ICollection<Locacao> Locacao { get; private set; }
+        public Filme(string titulo, int classificacaoIndicativa, bool lancamento)
         {
            
             Titulo = titulo;
             ClassificacaoIndicativa = classificacaoIndicativa;
             Lancamento = lancamento;
         }
-        public void Atualizar(string titulo, int classificacaoIndicativa, int lancamento) 
+        public void Atualizar(string titulo, int classificacaoIndicativa, bool lancamento) 
         {
             Titulo = titulo;
             ClassificacaoIndicativa = classificacaoIndicativa;
