@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Locadora.Application.Services.Interfaces;
 using Locadora.Application.ViewModels.FilmesViewModel;
-using Locadora.Application.ViewModels.UploadArquivosViewModel;
 using Locadora.Domain.Interfaces.Services;
 using Locadora.Domain.Models;
 using Locadora.Domain.Models.Commands;
@@ -57,63 +56,39 @@ namespace Locadora.Application.Services
             return await _filmesService.DeletarFilme(id);
         }
 
-        //public async Task<FilmeViewModel> ImportarFilme(ReadUploadArquivoViewModel formFile) 
-        //{
-        //    foreach( var filmes in formFile) 
-        //    {
-            
-        //    }
+        public async Task<FilmeViewModel> ImportarArquivo(IFormFile file)
+        {
+            //if (file == null) return null;
+            //var split = file.FileName.Split('.');
+            //var extensao = split[split.Length - 1];
+            //var result = file.FileName.Replace($".{extensao}", "");
+            //if (result != "csv") return null;
+           
+            using (var reader = new StreamReader(file.OpenReadStream()))
+            {
+                var filmeCadastrado = new Filme();
+                int numeroLinha = 0;
+                while (reader.Peek() >= 0)
+                {
+                    numeroLinha++;
+                    var registro = await reader.ReadLineAsync();
+                    
+                    if (numeroLinha == 1) continue;
 
-        //}
-
-        //public Stream ReadStraem(IFormFile form) 
-        //{
-        //    using  (var stream = new MemoryStream()) 
-        //    {
-        //        form?.CopyTo(stream);
-        //        //    var byteArray = stream.ToArray();
-        //        //   return  new MemoryStream(byteArray);
-        //        return stream;
-        //    }
-
-        //}
-        //public async Task<FilmeViewModel> LerArquivo(MemoryStream stream)
-        //{
-        //    var ListarFilme = new List<FilmeViewModel>();
-        //    var filme2 = new FilmeViewModel();
-        //    ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
-        //    using (ExcelPackage package = new ExcelPackage(stream))
-        //    {
-        //        ExcelWorksheet worksheet = package.Workbook.Worksheets[PositionID: 0];
-        //        int colCount = worksheet.Dimension.End.Column;
-        //        int rowCount = worksheet.Dimension.End.Row;
-
-        //        for (int row = 2; row <= rowCount; row++)
-        //        {
-        //            var filme = new NovoFilmeViewModel();
-        //            filme.Id = Convert.ToInt32(worksheet.Cells[row, Col: 1].Value);
-        //            filme.Titulo = worksheet.Cells[row, Col: 2].Value.ToString();
-        //            filme.ClassificacaoIndicativa = Convert.ToInt32(worksheet.Cells[row, Col: 3].Value);
-        //            filme.Lancamento = Convert.ToInt32(worksheet.Cells[row, Col: 4].Value);
-        //            // ListarFilme.Add(filme);
-
-        //            var ArquivoFilme = new Filme(
-        //                //filme.Id,
-        //                filme.Titulo,
-        //                filme.ClassificacaoIndicativa,
-        //                filme.Lancamento
-        //                );
-
-
-        //            var filmeAtualizado = await _filmesService.CadastrarFilme(ArquivoFilme);
-        //            return _mapper.Map<FilmeViewModel>(filmeAtualizado);
-        //        }
-
-        //    }
-
-        //    return  _mapper.Map<FilmeViewModel>(ListarFilme);
-        //}
+                    var conteudo = registro.Split(';');
+                    var ListaFilmeId = Convert.ToInt32(conteudo[0]);
+                    var filmeID = await _filmesService.FilmeId(ListaFilmeId);
+                    if (filmeID == null)
+                    {
+                        var filme = new Filme(conteudo[1], Convert.ToInt32(conteudo[2]), Convert.ToInt32(conteudo[3]) == 1);
+                        filmeCadastrado = await _filmesService.CadastrarFilme(filme);
+                    }
+                }
+                return _mapper.Map<FilmeViewModel>(filmeCadastrado);
+            }
+         
+        }
+       
     }
 }
 

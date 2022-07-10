@@ -14,8 +14,9 @@ namespace Locadora.Application.Services.Interfaces
         Task<LocacaoViewModel> CadastrarLocacao(NovaLocacaoViewModel novaLocacaoViewModel);
         Task<LocacaoViewModel> AtualizarLocacao(AtualizarLocacaoViewModel atualizarLocacaoViewModel);
         Task<bool> DeletarLocacao(long id);
+        //Task<IEnumerable<LocacaoViewModel>> ExportarArquivo();
 
-     }
+    }
 }
 
 

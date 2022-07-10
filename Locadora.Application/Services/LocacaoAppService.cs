@@ -5,6 +5,7 @@ using Locadora.Application.ViewModels.LocacaoViewModel;
 using Locadora.Domain.Interfaces.Services;
 using Locadora.Domain.Models;
 using Locadora.Domain.Models.Commands;
+using System.Text;
 
 namespace Locadora.Application.Services
 {
@@ -62,6 +63,20 @@ namespace Locadora.Application.Services
         {
             return await _locacaoService.DeletarLocacao(id);
         }
+        //public async Task<IEnumerable<LocacaoViewModel>> ExportarArquivo()
+        //{
+        //    var locacao = await _locacaoService.ListarLocacao();
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine("Id;IdCliente;IdFilmes;DataLocacao;DataDevolucao");
+        //    foreach (var ListaLocacao in locacao) 
+        //    {
+        //        sb.AppendLine($"{ListaLocacao.Id};{ListaLocacao.IdCliente};{ListaLocacao.IdFilmes};{ListaLocacao.DataLocacao};{ListaLocacao.DataDevolucao}");
+        //    }
+        //    var filePath = @"C:/tmp/locacao.csv";
+        //    File.WriteAllText(filePath, sb.ToString());
+        //    Console.ReadKey();
+        //    return _mapper.Map<IEnumerable<LocacaoViewModel>>(locacao);
+        //}
     }
 }
 

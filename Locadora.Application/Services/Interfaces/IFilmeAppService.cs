@@ -17,5 +17,7 @@ namespace Locadora.Application.Services.Interfaces
         Task<FilmeViewModel> AtualizarFilme(AtualizarFilmeViewModel atualizarFilmeViewModel);
         Task<bool> DeletarFilme(long id);
 
+        Task<FilmeViewModel> ImportarArquivo(IFormFile file);
+
     }
 }

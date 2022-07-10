@@ -53,5 +53,12 @@ namespace Locadora.Api.Controllers
             if (result) return Ok();
             return NotFound();
         }
+        //[HttpGet]
+        //public async Task<IActionResult> ExportarArquivo()
+        //{
+        //    var locacao = await _locacaoAppService.Listarlocacao();
+        //    if (locacao == null) return NotFound("Nenhum locação encontrado");
+        //    return Ok(locacao);
+        //}
     }
 }

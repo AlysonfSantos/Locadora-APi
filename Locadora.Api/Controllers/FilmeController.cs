@@ -57,11 +57,12 @@ namespace Locadora.Api.Controllers
 
         [Consumes(contentType: "multipart/form-data")]
         [HttpPost(template: "input-file")]
-        public async Task<IActionResult> ImportarArquivo(ReadsStraem file) 
+        public async Task<IActionResult> ImportarArquivo(IFormFile file) 
         {
-          //  await   _filmeAppService.ImportarFilme(file);
-          
-            return Ok();
+            var result =  await   _filmeAppService.ImportarArquivo(file);
+            if (result == null) return BadRequest("não foi possivel cadastrar arquivo de filme");
+
+            return Ok(result);
         }
     }
 }
